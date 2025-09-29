@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Safari</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <i class="fas fa-utensils header-icon"></i>
+            <h1>Recipe Safari</h1>
+            <p>Your ultimate recipe assistant!</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#" class="nav-link active" data-pane="recipes-pane"><i class="fas fa-utensils"></i> Recipes</a>
+        <a href="#" class="nav-link" data-pane="planner-pane"><i class="fas fa-calendar-alt"></i> Meal Planner</a>
+        <a href="#" class="nav-link" data-pane="favorites-pane"><i class="fas fa-heart"></i> Favorites</a>
+        <a href="#" class="nav-link" data-pane="shopping-pane"><i class="fas fa-shopping-basket"></i> Shopping List</a>
+    </nav>
+
+    <main>
+        <section id="recipes-pane" class="pane active">
+            <div class="search-container">
+                <input type="text" id="cuisine-input" placeholder="e.g., Italian, Mexican, Vegan">
+                <button id="cuisine-button" class="btn">Find Inspiration</button>
+            </div>
+            <div class="search-container ingredient-search">
+                <input type="text" id="ingredient-input" placeholder="Or, what's in your pantry? (e.g., chicken, pasta)">
+                <button id="search-button" class="btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <h2 id="results-title"></h2>
+            <div id="recipes-container" class="recipes-grid">
+                </div>
+        </section>
+
+        <section id="planner-pane" class="pane">
+            <h2><i class="fas fa-calendar-alt"></i> My Meal Planner</h2>
+            <div class="planner-options">
+                <div class="user-survey">
+                    <h3>Personalize Your Meal Plan</h3>
+                    <p>Tell us about your preferences for healthier suggestions.</p>
+                    <div class="survey-inputs">
+                        <input type="text" id="intolerances-input" placeholder="Food Intolerances (e.g., gluten)">
+                        <input type="text" id="diet-input" placeholder="Diet Type (e.g., vegan)">
+                    </div>
+                    <button id="get-suggestions-btn" class="btn">Get Suggestions</button>
+                </div>
+            </div>
+            <button id="clear-planner-btn" class="btn clear-btn">Clear All</button>
+            <div class="planner-grid">
+                <div class="planner-header"></div>
+                <div class="planner-header">Mon</div>
+                <div class="planner-header">Tue</div>
+                <div class="planner-header">Wed</div>
+                <div class="planner-header">Thu</div>
+                <div class="planner-header">Fri</div>
+                <div class="planner-header">Sat</div>
+                <div class="planner-header">Sun</div>
+                
+                <div class="meal-label">Breakfast</div>
+                <div class="meal-label">Lunch</div>
+                <div class="meal-label">Dinner</div>
+                </div>
+        </section>
+        
+        <section id="favorites-pane" class="pane">
+            <h2><i class="fas fa-heart"></i> My Favorites</h2>
+            <div id="favorites-list" class="recipes-grid">
+                </div>
+        </section>
+
+        <section id="shopping-pane" class="pane">
+            <h2><i class="fas fa-shopping-basket"></i> My Shopping List</h2>
+            <div class="shopping-input-container">
+                <input type="text" id="shopping-input" placeholder="Add an item...">
+                <button id="add-item-btn" class="btn"><i class="fas fa-plus"></i></button>
+            </div>
+            <ul id="shopping-list-items">
+                </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
